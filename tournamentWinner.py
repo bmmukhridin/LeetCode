@@ -11,11 +11,9 @@ def updateScores(team, points, scores):
 
 for idx, competitions in enumerate(competitions1):
     result = results[idx]
-    homeTeam, awayTeam = competitions
-    winnigTeam = [homeTeam, awayTeam]
-    winnigTeam.pop(result)
+    competitions.pop(result)
 
-    for i in winnigTeam:
+    for i in competitions:
         updateScores(i, 3, scores)
 
 
